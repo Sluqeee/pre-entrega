@@ -1,381 +1,191 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  box-sizing: content-box; }
 
-*{
-    margin: 0;
-    padding: 0;
-    color: black;
-    box-sizing: content-box;
-}
-a{
-    text-decoration: none;
-    color:inherit;
-}
+a {
+  text-decoration: none;
+  color: inherit; }
 
 /** logo lantana y lista de navegación **/
-
-
 .logoLantana {
-    text-align: center;
-}
+  text-align: center; }
 
 .listaNav, .separador, .separadorIngresos, .separadorFinal {
-    background-color: #FFBCBC;
-    text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
-    list-style: none;
-    min-height: 1.2rem;
-    padding-top: 0.75rem;
-    width: 100%;
-}
-
-.listaNav li, .separadorIngresos {
+  background-color: #FFBCBC;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  list-style: none;
+  min-height: 1.2rem;
+  padding-top: 0.75rem;
+  width: 100%; }
+  .listaNav li, .separador li, .separadorIngresos li, .separadorFinal li {
     display: inline-block;
     font-size: 1.6rem;
-    border-right: 1px solid rgb(0, 0, 0);
-    padding: 1 1.7rem;
-}
-
-.listaNav li:last-child {
-    border-right: none;
-}
-
-.listaNav li a:hover{
-    color: grey;
-}
+    border-right: 1px solid black;
+    padding: 1 1.7rem; }
+    .listaNav li:last-child, .separador li:last-child, .separadorIngresos li:last-child, .separadorFinal li:last-child {
+      border-right: none; }
+    .listaNav li:hover, .separador li:hover, .separadorIngresos li:hover, .separadorFinal li:hover {
+      color: grey; }
 
 .joya {
-    text-align: center;
-}
-
-.joya img, .nuevosIngresos, .bannersProductos {
+  text-align: center; }
+  .joya img, .joya .nuevosIngresos, .joya .bannersProductos {
     display: flex;
-    width: 100%;
-}
+    width: 100%; }
 
-/** main nuevos ingresos **/
-
+/*main nuevos ingresos */
 .nuevosIngresos {
-    background-image: url(../assets/fondoingresos.png);
-    text-align: center;
-    width: 100%;
+  background-image: url(../assets/fondoingresos.png);
+  text-align: center;
+  width: 100%; }
+  .nuevosIngresos img {
+    max-height: 43%;
+    margin: auto; }
 
-}
-.nuevosIngresos img {
-    max-width: 43%;
-    margin: auto;
-}
 /** fotos principales **/
-
-.bannersProductos{
-    gap: 1.25rem;
-}
-
-.bannersProductos .producto { 
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.bannersProductos div{
+.bannersProductos .producto {
+  gap: 1.25rem;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row; }
+  .bannersProductos .producto div {
     border: 2px solid rgba(0, 0, 0, 0.135);
     border-radius: 22.25rem;
     overflow: hidden;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197);
-
-}
-.bannersProductos div img{
-    filter: opacity(50%)
-}
-.bannersProductos div img:hover{
-    filter: opacity(100%)
-}
-
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197); }
+    .bannersProductos .producto div img {
+      filter: opacity(50%); }
+      .bannersProductos .producto div img:hover {
+        filter: opacity(100%); }
 
 .producto img {
-    width: 100%;
-}
+  width: 100%; }
 
 .verMas {
-    text-align: center;
-    font-size: 1.5625rem;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-decoration: underline;
-}
+  text-align: center;
+  font-size: 1.5625rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-decoration: underline; }
+  .verMas:hover {
+    color: grey; }
 
-.verMas:hover{
-    color: grey;
-}
-/** index con grid **/
-.gridConteinter div img{
+/*index con grid*/
+.gridConteinter {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(3, 200px);
+  /* maximo 12 columns */
+  grid-template-rows: repeat(1, 200px);
+  grid-template-areas: "item1 item2 item3";
+  justify-content: center;
+  align-content: center;
+  column-gap: 450px;
+  justify-items: center;
+  align-items: center; }
+  .gridConteinter div img {
     border: 2px solid rgba(0, 0, 0, 0.135);
     border-radius: 22.25rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197);
-}
-.gridConteinter div img{
-    filter: blur(2px)
-}
-.gridConteinter div img:hover{
-    filter: blur(0px)
-}
+    border: 2px solid rgba(0, 0, 0, 0.135);
+    border-radius: 22.25rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197);
+    filter: blur(2px); }
+    .gridConteinter div img:hover {
+      filter: blur(0px); }
 
-.gridConteinter{
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    grid-template-columns: repeat(3, 200px); /* maximo 12 columns */
-    grid-template-rows: repeat(1, 200px);
-    grid-template-areas: 
-    "item1 item2 item3"
-    ;
-    justify-content: center;
-    align-content: center;
-    column-gap: 450px;
-    justify-items: center;
-    align-items: center;
-}
-.item1{
-    grid-area: item1;
-    justify-self: center;
-    align-self: center;
-    width: 300%;
-}
-.item1 img{
-    width: 100%;
-}
-.item2{
-    grid-area: item2;
-    justify-self: center;
-    width: 300%;
-}
-.item2 img{
-    width: 100%;
-}
-.item3{
-    grid-area: item3;
-    justify-self: center;
-    width: 300%;
-}
-.item3 img{
-    width: 100%;
-}
+.item1 {
+  grid-area: item1;
+  justify-self: center;
+  align-self: center;
+  width: 300%; }
+  .item1 img {
+    width: 100%; }
+
+.item2 {
+  grid-area: item2;
+  justify-self: center;
+  width: 300%; }
+  .item2 img {
+    width: 100%; }
+
+.item3 {
+  grid-area: item3;
+  justify-self: center;
+  width: 300%; }
+  .item3 img {
+    width: 100%; }
 
 /** Footer **/
-
 .footer {
-    background-color: #000000d3;
-    text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.footer h3 {
+  background-color: #000000d3;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif; }
+  .footer h3 {
     color: #ffffff;
-    padding-top: 0.5rem;
-}
+    padding-top: 0.5rem; }
 
-.Redes {
-    margin: 0.5rem 0 0 0;
-}
-
-.Redes .Ig, .Fb {
-width: 50px;
-
-}
+.redes {
+  margin: 0.5rem 0 0 0; }
+  .redes .Ig, .redes .Fb {
+    width: 50px; }
 
 .navFooter {
-    color: #ffffff;
-    display: block;
-    text-align: center;
-    margin: 1rem;
-}
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  margin: 1rem; }
 
-/** Nosotros **/
+/*nosotros*/
+.nosotros {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
 
-.nosotros    {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+.parrafo {
+  font-family: 'Montserrat Alternates', sans-serif;
+  align-self: center;
+  text-align: center;
+  font-size: 2rem; }
+  .parrafo::first-letter {
+    font-size: 5.5rem; }
 
-
-
-.parrafo{
-    font-family: 'Montserrat Alternates', sans-serif;
-    align-self: center;
-    text-align: center;
-    font-size: 2rem;
-}
-.parrafo::first-letter{
-    font-size: 5.5rem;
-}
-
-/** FAQ **/
-
+/*faQ*/
 .preguntasFrecuentes {
-    display: inline-block;
-}
-
-.imgFaq {
-    width: 100%;
-}
+  display: inline-block; }
 
 .pFaq {
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: center;
-    font-size: 2rem;
-    padding: 1.25rem ;
-    margin-top: 120px;
-    margin-bottom: 120px;
-}
-.pFaq::first-letter{
-    font-size: 5.5rem;
-}
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.25rem;
+  margin-top: 120px;
+  margin-bottom: 120px; }
+  .pFaq::first-letter {
+    font-size: 5.5rem; }
 
-/** Contactos **/
+.imgFaq {
+  width: 100%; }
 
-
+/*Contactos*/
 .contactos {
-    display: inline;
-}
+  display: inline; }
 
-.imgContactos{
-    width: 100%;
-}
+.imgContactos {
+  width: 100%; }
 
 .pContactos {
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: center;
-    font-size: 2rem;
-    padding: 1.25rem ;
-    margin-top: 12px;
-    margin-bottom: 50px;
-}
-.pContactos::first-letter{
-    font-size: 5.2rem;
-}
-
-
-/*FAQ media*/ 
-
-
-@media (max-width: 1024px){
-    .separadorIngresos{
-        padding-top: 0.20rem;
-    }
-    .pFaq .pContactos{
-        font-size: 1.6rem;
-    }
-    .footer h3 {
-        font-size: 1.5625rem;
-    }
-    .navFooter {
-        font-size: 1.5625rem;
-    }
-}
-
-@media (max-width: 768px){
-    .pFaq .pContactos{
-        font-size: 1.4rem;
-    }
-    .footer h3 {
-        font-size: 1.55rem;
-    }
-    .footer .Ig {
-        width: 35px;
-    }
-    .footer .Fb{
-        width: 35px;
-    }
-    .navFooter {
-        font-size: 1.3625rem;
-    }
-}
-
-@media (max-width: 425px){
-    .logoLantana img {
-        width: 80%;
-    }
-    .listaNav {
-        background-color: #FFBCBC;
-    }
-    .listaNav li{
-        font-size: 1.2rem;
-    }
-    .separadorIngresos{
-        font-size: 1.2rem;
-        padding-top: 0.20rem;
-    }
-    .pFaq .pContactos{
-        font-size: 1rem;
-    }
-    .footer h3 {
-        font-size: 1.150rem;
-    }
-    .footer .Ig {
-        width: 30px;
-    }
-    .footer .Fb{
-        width: 30px;
-    }
-    .navFooter {
-        font-size: 18px;
-    }
-}
-@media (max-width: 320px){
-    .logoLantana img {
-        width: 70%;
-    }
-    .listaNav {
-        background-color: #FFBCBC;
-        padding-top: 0.5rem;
-    }
-    .listaNav li {
-        display: flex;
-        flex-direction: column;
-        font-size: .9375rem;
-    }
-    .separadorIngresos{
-        padding-top: 0.20rem;
-        font-size: 1rem;
-    }
-    .pFaq {
-        font-size: 0.8rem;
-    }
-    .footer h3 {
-        font-size: .9375rem;
-    }
-    .footer .Ig {
-        width: 25px;
-    }
-    .footer .Fb{
-        width: 25px;
-    }
-    .navFooter {
-        font-size: 12px;
-    }
-}
-
-
-/* Contactos media */
-
-
-@media (max-width: 1024px){
-    .pContactos{
-        font-size: 1.6rem;
-    }
-}
-@media (max-width: 768px){
-    .pContactos{
-        font-size: 1.55rem;
-    }
-}
-@media (max-width: 425px){
-    .pContactos{
-        font-size: 1rem;
-    }
-}
-@media (max-width: 320px){
-    .pContactos{
-        font-size: 0.8rem;
-    }
-}
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.25rem;
+  margin-top: 12px;
+  margin-bottom: 50px; }
+  .pContactos::first-letter {
+    font-size: 5.2rem; }
