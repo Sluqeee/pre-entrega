@@ -1,0 +1,10 @@
+.logoLantana{
+    text-align: center;
+}
+.joya{
+    @extend .logoLantana;
+    img, .nuevosIngresos, .bannersProductos{
+        display: flex;
+        width: 100%;
+    }
+}

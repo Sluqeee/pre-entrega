@@ -1,0 +1,22 @@
+/** Footer **/
+.footer{
+    background-color: #000000d3;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    h3{
+        color: map-get($color , blanco );
+        padding-top: 0.5rem;
+    }
+}
+.redes {
+    margin: 0.5rem 0 0 0;
+    .Ig, .Fb{
+        width: 50px;
+    }
+}
+.navFooter {
+    color: map-get($color , blanco );
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}

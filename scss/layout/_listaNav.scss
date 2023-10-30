@@ -1,0 +1,21 @@
+.listaNav, .separador, .separadorIngresos, .separadorFinal{
+    background-color: $listanavColor;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    list-style: none;
+    min-height: 1.2rem;
+    padding-top: 0.75rem;
+    width: 100%;
+    li{
+        display: inline-block;
+        font-size: 1.6rem;
+        border-right: 1px solid rgb(0,0,0);
+        padding: 1 1.7rem;
+        &:last-child{
+            border-right: none;
+        }
+        &:hover{
+            color: $colorHover;
+        }
+    }
+}

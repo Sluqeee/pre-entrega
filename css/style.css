@@ -1,4 +1,6 @@
-@charset "UTF-8";
+/*recordatorio: variables mixins y mapas = utilities*/
+/*recordatorio: 2do llamado carpeta Base*/
+/*modificaciones generales*/
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +11,12 @@ a {
   text-decoration: none;
   color: inherit; }
 
-/** logo lantana y lista de navegación **/
-.logoLantana {
+.logoLantana, .joya {
   text-align: center; }
+
+.joya img, .joya .nuevosIngresos, .joya .bannersProductos {
+  display: flex;
+  width: 100%; }
 
 .listaNav, .separador, .separadorIngresos, .separadorFinal {
   background-color: #FFBCBC;
@@ -31,12 +36,6 @@ a {
     .listaNav li:hover, .separador li:hover, .separadorIngresos li:hover, .separadorFinal li:hover {
       color: grey; }
 
-.joya {
-  text-align: center; }
-  .joya img, .joya .nuevosIngresos, .joya .bannersProductos {
-    display: flex;
-    width: 100%; }
-
 /*main nuevos ingresos */
 .nuevosIngresos {
   background-image: url(../assets/fondoingresos.png);
@@ -46,20 +45,19 @@ a {
     max-height: 43%;
     margin: auto; }
 
-/** fotos principales **/
-.bannersProductos .producto {
-  gap: 1.25rem;
-  width: 100%;
-  justify-content: space-between;
-  flex-direction: row; }
-  .bannersProductos .producto div {
+/** fotos principales y fotos productos **/
+.bannersProductos {
+  display: flex;
+  justify-content: center;
+  column-gap: 6.25rem; }
+  .bannersProductos div {
     border: 2px solid rgba(0, 0, 0, 0.135);
     border-radius: 22.25rem;
     overflow: hidden;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197); }
-    .bannersProductos .producto div img {
+    .bannersProductos div img {
       filter: opacity(50%); }
-      .bannersProductos .producto div img:hover {
+      .bannersProductos div img:hover {
         filter: opacity(100%); }
 
 .producto img {
@@ -120,26 +118,6 @@ a {
   .item3 img {
     width: 100%; }
 
-/** Footer **/
-.footer {
-  background-color: #000000d3;
-  text-align: center;
-  font-family: 'Montserrat Alternates', sans-serif; }
-  .footer h3 {
-    color: #ffffff;
-    padding-top: 0.5rem; }
-
-.redes {
-  margin: 0.5rem 0 0 0; }
-  .redes .Ig, .redes .Fb {
-    width: 50px; }
-
-.navFooter {
-  color: #ffffff;
-  display: block;
-  text-align: center;
-  margin: 1rem; }
-
 /*nosotros*/
 .nosotros {
   display: flex;
@@ -188,4 +166,112 @@ a {
   margin-top: 12px;
   margin-bottom: 50px; }
   .pContactos::first-letter {
-    font-size: 5.2rem; }
+    font-size: 5.5rem; }
+
+/** Footer **/
+.footer {
+  background-color: #000000d3;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif; }
+  .footer h3 {
+    color: #ffffff;
+    padding-top: 0.5rem; }
+
+.redes {
+  margin: 0.5rem 0 0 0; }
+  .redes .Ig, .redes .Fb {
+    width: 50px; }
+
+.navFooter {
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  margin: 1rem; }
+
+/*quarys*/
+@media (max-width: 1024px) {
+  .separadorIngresos {
+    padding-top: 0.20rem; }
+  .pFaq .pContactos {
+    font-size: 1.6rem; }
+  .footer h3 {
+    font-size: 1.5625rem; }
+  .navFooter {
+    font-size: 1.5625rem; } }
+
+/* Contactos media */
+@media (max-width: 1024px) {
+  .pContactos {
+    font-size: 1.6rem; } }
+
+@media (max-width: 768px) {
+  .pFaq .pContactos {
+    font-size: 1.4rem; }
+  .footer h3 {
+    font-size: 1.55rem; }
+  .footer .Ig {
+    width: 35px; }
+  .footer .Fb {
+    width: 35px; }
+  .navFooter {
+    font-size: 1.3625rem; } }
+
+/* Contactos media */
+@media (max-width: 768px) {
+  .pContactos {
+    font-size: 1.55rem; } }
+
+@media (max-width: 425px) {
+  .logoLantana img, .joya img {
+    width: 80%; }
+  .listaNav {
+    background-color: #FFBCBC; }
+  .listaNav li {
+    font-size: 1.2rem; }
+  .separadorIngresos {
+    font-size: 1.2rem;
+    padding-top: 0.20rem; }
+  .pFaq .pContactos {
+    font-size: 1rem; }
+  .footer h3 {
+    font-size: 1.150rem; }
+  .footer .Ig {
+    width: 30px; }
+  .footer .Fb {
+    width: 30px; }
+  .navFooter {
+    font-size: 18px; } }
+
+/* Contactos media */
+@media (max-width: 425px) {
+  .pContactos {
+    font-size: 1rem; } }
+
+@media (max-width: 320px) {
+  .logoLantana img, .joya img {
+    width: 70%; }
+  .listaNav {
+    background-color: #FFBCBC;
+    padding-top: 0.5rem; }
+  .listaNav li {
+    display: flex;
+    flex-direction: column;
+    font-size: .9375rem; }
+  .separadorIngresos {
+    padding-top: 0.20rem;
+    font-size: 1rem; }
+  .pFaq {
+    font-size: 0.8rem; }
+  .footer h3 {
+    font-size: .9375rem; }
+  .footer .Ig {
+    width: 25px; }
+  .footer .Fb {
+    width: 25px; }
+  .navFooter {
+    font-size: 12px; } }
+
+/* Contactos media */
+@media (max-width: 320px) {
+  .pContactos {
+    font-size: 0.8rem; } }

@@ -1,0 +1,40 @@
+@media (max-width: 320px){
+    .logoLantana img {
+        width: 70%;
+    }
+    .listaNav {
+        background-color: $listanavColor;
+        padding-top: 0.5rem;
+    }
+    .listaNav li {
+        display: flex;
+        flex-direction: column;
+        font-size: .9375rem;
+    }
+    .separadorIngresos{
+        padding-top: 0.20rem;
+        font-size: 1rem;
+    }
+    .pFaq {
+        font-size: 0.8rem;
+    }
+    .footer h3 {
+        font-size: .9375rem;
+    }
+    .footer .Ig {
+        width: 25px;
+    }
+    .footer .Fb{
+        width: 25px;
+    }
+    .navFooter {
+        font-size: 12px;
+    }
+}
+/* Contactos media */
+
+@media (max-width: 320px){
+    .pContactos{
+        font-size: 0.8rem;
+    }
+}

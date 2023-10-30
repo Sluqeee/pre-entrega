@@ -1,0 +1,150 @@
+/*main nuevos ingresos */
+.nuevosIngresos{
+    background-image: url(../assets/fondoingresos.png);
+    text-align: center;
+    width: 100%;
+    img{
+        max-height: 43%;
+        margin: auto;
+    }
+}
+
+/** fotos principales y fotos productos **/
+.bannersProductos{
+    display: flex;
+    justify-content: center;
+    column-gap: 6.25rem;
+    div{
+        border: 2px solid rgba(0, 0, 0, 0.135);
+        border-radius: 22.25rem;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px map-get($color , negro );
+        img{
+            filter: opacity(50%);
+            &:hover{
+                filter: opacity(100%);
+            }
+        }
+    }
+}
+.producto{
+    img{
+        width: 100%;
+    }
+}
+.verMas{
+    text-align: center;
+    font-size: 1.5625rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-decoration: underline;
+    &:hover{
+        color: $colorHover;
+    }
+}
+/*index con grid*/
+
+.gridConteinter{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(3, 200px); /* maximo 12 columns */
+    grid-template-rows: repeat(1, 200px);
+    grid-template-areas: 
+    "item1 item2 item3"
+    ;
+    justify-content: center;
+    align-content: center;
+    column-gap: 450px;
+    justify-items: center;
+    align-items: center;
+    div{
+        img{
+            border: 2px solid rgba(0, 0, 0, 0.135);
+            border-radius: 22.25rem;
+            box-shadow: 2px 2px 5px map-get($color , negro );border: 2px solid rgba(0, 0, 0, 0.135);
+            border-radius: 22.25rem;
+            box-shadow: 2px 2px 5px map-get($color , negro );
+            filter: blur(2px);
+            &:hover{
+                filter: blur(0px);
+            }
+        }
+    }
+}
+.item1{
+    grid-area: item1;
+    justify-self: center;
+    align-self: center;
+    width: 300%;
+    img{
+        width: 100%;
+    }
+}
+.item2{
+    grid-area: item2;
+    justify-self: center;
+    width: 300%;
+    img{
+        width: 100%;
+    }
+}
+.item3{
+    grid-area: item3;
+    justify-self: center;
+    width: 300%;
+    img{
+        width: 100%;
+    }
+}
+/*nosotros*/
+
+.nosotros{
+    @include flex (100%,row,wrap,space-evenly);
+}
+.parrafo{
+    font-family: 'Montserrat Alternates', sans-serif;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    &::first-letter{
+        font-size: 5.5rem;
+    }
+}
+/*faQ*/
+
+.preguntasFrecuentes{
+    display: inline-block;
+}
+.pFaq{
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.25rem;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    &::first-letter{
+        font-size: 5.5rem;
+    }
+}
+.imgFaq{
+    width: 100%;
+}
+/*Contactos*/
+
+.contactos{
+    display: inline;
+}
+.imgContactos{
+    width: 100%;
+}
+.pContactos{
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.25rem;
+    margin-top: 12px;
+    margin-bottom: 50px;
+    &::first-letter{
+        font-size: 5.5rem;
+    }
+}
