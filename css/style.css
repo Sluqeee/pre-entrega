@@ -11,7 +11,7 @@ a {
   text-decoration: none;
   color: inherit; }
 
-.logoLantana, .joya {
+.logoLantana, .joya img, .joya .nuevosIngresos, .joya .bannersProductos {
   text-align: center; }
 
 .joya img, .joya .nuevosIngresos, .joya .bannersProductos {
@@ -35,6 +35,9 @@ a {
       border-right: none; }
     .listaNav li:hover, .separador li:hover, .separadorIngresos li:hover, .separadorFinal li:hover {
       color: grey; }
+    .listaNav li:hover, .separador li:hover, .separadorIngresos li:hover, .separadorFinal li:hover {
+      transform: scale(1.1);
+      transition: transform 2s; }
 
 /*main nuevos ingresos */
 .nuevosIngresos {
@@ -49,7 +52,8 @@ a {
 .bannersProductos {
   display: flex;
   justify-content: center;
-  column-gap: 6.25rem; }
+  column-gap: 6.25rem;
+  padding-top: 3.125rem; }
   .bannersProductos div {
     border: 2px solid rgba(0, 0, 0, 0.135);
     border-radius: 22.25rem;
@@ -59,6 +63,8 @@ a {
       filter: opacity(50%); }
       .bannersProductos div img:hover {
         filter: opacity(100%); }
+        .bannersProductos div img:hover ::before {
+          transform: translate(0) rotate(360deg); }
 
 .producto img {
   width: 100%; }
@@ -67,7 +73,8 @@ a {
   text-align: center;
   font-size: 1.5625rem;
   font-family: 'Montserrat Alternates', sans-serif;
-  text-decoration: underline; }
+  text-decoration: underline;
+  padding-top: 3.125rem; }
   .verMas:hover {
     color: grey; }
 
@@ -92,31 +99,52 @@ a {
     border: 2px solid rgba(0, 0, 0, 0.135);
     border-radius: 22.25rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197);
-    filter: blur(2px); }
+    filter: blur(3px); }
     .gridConteinter div img:hover {
       filter: blur(0px); }
 
 .item1 {
+  width: 250%;
   grid-area: item1;
-  justify-self: center;
-  align-self: center;
-  width: 300%; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .item1 img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    transition: width 1s; }
+    .item1 img:hover {
+      transform: scale(1.2);
+      transition: transform 2s; }
 
 .item2 {
+  width: 250%;
   grid-area: item2;
-  justify-self: center;
-  width: 300%; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
   .item2 img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    transition: width 1s; }
+    .item2 img:hover {
+      transform: scale(1.2);
+      transition: transform 2s; }
 
 .item3 {
+  width: 250%;
   grid-area: item3;
-  justify-self: center;
-  width: 300%; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .item3 img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    transition: width 1s; }
+    .item3 img:hover {
+      transform: scale(1.2);
+      transition: transform 2s; }
 
 /*nosotros*/
 .nosotros {
@@ -125,6 +153,8 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly; }
+  .nosotros img {
+    width: 37.5rem; }
 
 .parrafo {
   font-family: 'Montserrat Alternates', sans-serif;
@@ -132,7 +162,7 @@ a {
   text-align: center;
   font-size: 2rem; }
   .parrafo::first-letter {
-    font-size: 5.5rem; }
+    font-size: 2.5rem; }
 
 /*faQ*/
 .preguntasFrecuentes {
@@ -146,7 +176,7 @@ a {
   margin-top: 120px;
   margin-bottom: 120px; }
   .pFaq::first-letter {
-    font-size: 5.5rem; }
+    font-size: 2.5rem; }
 
 .imgFaq {
   width: 100%; }
@@ -189,7 +219,11 @@ a {
   margin: 1rem; }
 
 /*quarys*/
+/* faQ media */
 @media (max-width: 1024px) {
+  .joya {
+    display: flex;
+    width: 100%; }
   .separadorIngresos {
     padding-top: 0.20rem; }
   .pFaq .pContactos {
@@ -204,6 +238,7 @@ a {
   .pContactos {
     font-size: 1.6rem; } }
 
+/* faQ media */
 @media (max-width: 768px) {
   .pFaq .pContactos {
     font-size: 1.4rem; }
@@ -221,9 +256,23 @@ a {
   .pContactos {
     font-size: 1.55rem; } }
 
+/* nosotros media */
+@media (max-width: 768px) {
+  .nosotros img {
+    padding-top: .625rem;
+    width: 20rem; }
+  .nosotros p {
+    font-size: 1.6rem; }
+    .nosotros p::first-letter {
+      font-size: 2.3rem; } }
+
+/* faQ media */
 @media (max-width: 425px) {
-  .logoLantana img, .joya img {
+  .logoLantana img, .joya img img, .joya .nuevosIngresos img, .joya .bannersProductos img {
     width: 80%; }
+  .joya {
+    display: flex;
+    width: 100%; }
   .listaNav {
     background-color: #FFBCBC; }
   .listaNav li {
@@ -247,8 +296,19 @@ a {
   .pContactos {
     font-size: 1rem; } }
 
+/* nosotros media */
+@media (max-width: 425px) {
+  .nosotros img {
+    padding-top: .625rem;
+    width: 18.75rem; }
+  .nosotros p {
+    font-size: 1.2rem; }
+    .nosotros p::first-letter {
+      font-size: 2rem; } }
+
+/* faQ media */
 @media (max-width: 320px) {
-  .logoLantana img, .joya img {
+  .logoLantana img, .joya img img, .joya .nuevosIngresos img, .joya .bannersProductos img {
     width: 70%; }
   .listaNav {
     background-color: #FFBCBC;
@@ -262,6 +322,8 @@ a {
     font-size: 1rem; }
   .pFaq {
     font-size: 0.8rem; }
+    .pFaq::first-letter {
+      font-size: 1.5rem; }
   .footer h3 {
     font-size: .9375rem; }
   .footer .Ig {
@@ -274,4 +336,16 @@ a {
 /* Contactos media */
 @media (max-width: 320px) {
   .pContactos {
-    font-size: 0.8rem; } }
+    font-size: 0.8rem; }
+    .pContactos::first-letter {
+      font-size: 1.5rem; } }
+
+/* nosotros media */
+@media (max-width: 320px) {
+  .nosotros img {
+    padding-top: .625rem;
+    width: 15.75rem; }
+  .nosotros p {
+    font-size: 16px; }
+    .nosotros p::first-letter {
+      font-size: 1.5rem; } }

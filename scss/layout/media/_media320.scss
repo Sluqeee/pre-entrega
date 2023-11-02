@@ -1,3 +1,5 @@
+/* faQ media */
+
 @media (max-width: 320px){
     .logoLantana img {
         width: 70%;
@@ -17,6 +19,9 @@
     }
     .pFaq {
         font-size: 0.8rem;
+        &::first-letter{
+            font-size: 1.5rem;
+        }
     }
     .footer h3 {
         font-size: .9375rem;
@@ -36,5 +41,25 @@
 @media (max-width: 320px){
     .pContactos{
         font-size: 0.8rem;
+        &::first-letter{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* nosotros media */
+
+@media (max-width: 320px){
+    .nosotros{
+        img{
+            padding-top: .625rem;
+            width: 15.75rem;
+        }
+        p{
+            font-size: 16px;
+            &::first-letter{
+                font-size: 1.5rem;
+            }
+        }
     }
 }

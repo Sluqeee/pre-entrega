@@ -1,6 +1,12 @@
+/* faQ media */
+
 @media (max-width: 425px){
     .logoLantana img {
         width: 80%;
+    }
+    .joya{
+        display: flex;
+        width: 100%;
     }
     .listaNav {
         background-color: $listanavColor;
@@ -33,5 +39,22 @@
 @media (max-width: 425px){
     .pContactos{
         font-size: 1rem;
+    }
+}
+
+/* nosotros media */
+
+@media (max-width: 425px){
+    .nosotros{
+        img{
+            padding-top: .625rem;
+            width: 18.75rem;
+        }
+        p{
+            font-size: 1.2rem;
+            &::first-letter{
+                font-size: 2rem;
+            }
+        }
     }
 }
