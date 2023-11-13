@@ -25,3 +25,20 @@
         font-size: 1.6rem;
     }
 }
+
+/* Index media */
+
+@media (max-width: 1024px){
+    .gridConteinter{
+        column-gap: 9.375rem    ;
+    }
+    .item1{
+        width: 18.75rem;
+    }
+    .item2{
+        width: 18.75rem;
+    }
+    .item3{
+        width: 18.75rem;
+    }
+}

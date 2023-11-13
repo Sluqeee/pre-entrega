@@ -40,3 +40,27 @@
         }
     }
 }
+/* Index media */
+
+@media (max-width: 768px){
+    .gridConteinter{
+        column-gap: 3.125rem;
+    }
+    .item1{
+        width: 100%;
+    }
+    .item2{
+        width: 100%;
+    }
+    .item3{
+        width: 100%;
+    }
+}
+
+/* bootstrap media */
+
+@media (max-width: 768px){
+    .p-5{
+        column-gap: 50px;
+    }
+}
