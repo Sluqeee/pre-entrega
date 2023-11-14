@@ -65,7 +65,7 @@
         grid-template-columns: repeat(1, 200px);
         column-gap: 3.125rem;
         row-gap: 3.125rem;
-        padding-top: 3.125rem;
+        padding-top: 6.125rem;
         grid-template-areas: 
         "item1"
         "item2"
@@ -92,5 +92,14 @@
         margin: auto;
         padding-top: 1.125rem;
         padding-bottom: 1.125rem;
+    }
+}
+/*error404 media */
+
+@media(max-width: 425px){
+    .error404{
+        img{
+            width: 18.75rem;
+        }
     }
 }

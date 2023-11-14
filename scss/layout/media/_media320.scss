@@ -63,3 +63,21 @@
         }
     }
 }
+
+/*index media */
+
+@media(max-width: 320px){
+    .gridConteinter{
+        padding-top: 6.25rem;
+    }
+}
+
+/*404 media*/
+
+@media(max-width: 320px){
+    .error404{
+        img{
+            width: 15.75rem;
+        }
+    }
+}
